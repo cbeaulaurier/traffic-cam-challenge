@@ -1,7 +1,21 @@
-body, input {
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,700);
+
+h1, h2, body, input {
+    font-family: Roboto,'Helvetica Neue', Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 300;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 20px;
 }
 
 #map {
@@ -12,4 +26,12 @@ body, input {
 
 input {
     width: 100%;
+}
+
+.error-message {
+    display: none;
+    color: #B00000;
+    background-color: #EE9572;
+    padding: 1em;
+    font-weight: 400;
 }
