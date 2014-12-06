@@ -60,23 +60,5 @@ $(document).ready(function () {
         lng: -122.3080
     };
 
-    function onGeoSuccess(position) {
-        var center = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-        };
-        createMap(center, 12);
-    } // onGeoSuccess()
-
-    function onGeoError(err) {
-        console.log(err);
-    } // onGeoError()
-
-    if (navigator && navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError, {
-            enableHighAccuracy: true            // enables GPS
-        });
-    } else {
-        createMap(defaultCoords, 12);
-    }
+    createMap(defaultCoords, 12);
 });
